@@ -69,6 +69,11 @@ streamlit run src/water_analysis.py
 
 ## 相关项目
 
-- [PCCP](https://github.com/LY-muyanshiqi/PCCP) — PCCP-E 环向变形智能预测
-- [smart-water-projects](https://github.com/LY-muyanshiqi/smart-water-projects) — 智慧水利开源项目集
-- [thermal-peak-shaving-pumped-storage](https://github.com/LY-muyanshiqi/thermal-peak-shaving-pumped-storage) — 抽水蓄能减碳优化
+| 项目 | 描述 |
+|------|------|
+| [PCCP](https://github.com/LY-muyanshiqi/PCCP) | Inception-ResNet-LSTM · R²=0.986 |
+| [smart-water-projects](https://github.com/LY-muyanshiqi/smart-water-projects) | 智慧水利开源项目集 |
+| [坝道微医](https://github.com/LY-muyanshiqi/badao-weiyi) | 水利部认定 · 92%诊断精度 |
+| [华中杯-VRP](https://github.com/LY-muyanshiqi/huazhong-cup-vrp) | Hybrid-ILS · 278页论文 |
+| [统计建模-玉米](https://github.com/LY-muyanshiqi/statistical-modeling-corn) | LSTM+CNN+XGBoost · R²=0.82 |
+| [蓄能智调](https://github.com/LY-muyanshiqi/pumped-storage-carbon) | LSTM来水预测 · 碳减排优化 |
