@@ -4,22 +4,31 @@
 ![TensorFlow](https://img.shields.io/badge/TensorFlow-深度学习-FF6F00?style=flat-square&logo=tensorflow&logoColor=white)
 ![Streamlit](https://img.shields.io/badge/Streamlit-前端-FF4B4B?style=flat-square&logo=streamlit&logoColor=white)
 ![Flask](https://img.shields.io/badge/Flask-API-000000?style=flat-square&logo=flask&logoColor=white)
+![License](https://img.shields.io/badge/License-MIT-green?style=flat-square)
 
-> 面向智慧水利的洪水预警与决策支持系统 — 全栈独立开发
+> 面向智慧水利的洪水预警与决策支持系统 —— 全栈独立开发
 
 ---
 
 ## 项目简介
 
-集成实时雨情监测、LSTM 深度学习预测、GIS 淹没模拟和应急决策支持，为流域防洪提供智能化解决方案。
+集成实时雨情监测、LSTM/GRU 深度学习预测、GIS 淹没模拟和应急决策支持，为流域防洪提供智能化解决方案。
 
 ## 核心功能
 
-- **实时雨情监测** — 接入气象数据 API，实时监测降雨情况
-- **洪水预测** — 基于 LSTM/GRU 深度学习模型，预测未来洪水过程
-- **淹没模拟** — GIS 可视化展示淹没范围和影响区域
-- **决策支持** — 人员撤离方案 + 资源配置建议
-- **数据可视化** — Matplotlib 交互式图表
+| 模块 | 说明 | 文件 |
+|------|------|------|
+| 数据预处理 | 缺失值处理、归一化、时序窗口构建 | `src/data_preprocessing.py` |
+| LSTM 预测 | 基于 LSTM/GRU 的洪水过程预测 | `src/lstm_predictor.py` |
+| KNN 预测 | KNN 回归辅助预测模型 | `src/knn_predictor.py` |
+| 水情分析 | 水位趋势分析、异常检测 | `src/water_analysis.py` |
+| 可视化 | Matplotlib 交互式图表 | `src/visualizer.py` |
+
+## 预测效果
+
+![LSTM Training](images/lstm_training_history.png)
+![LSTM Predictions](images/lstm_predictions.png)
+![LSTM Residuals](images/lstm_residuals.png)
 
 ## 技术栈
 
@@ -32,21 +41,34 @@
 | 可视化 | Matplotlib · ECharts · GIS |
 | 版本控制 | Git + GitHub |
 
+## 项目结构
+
+```
+smart-water-demo/
+├── src/
+│   ├── data_preprocessing.py   # 数据预处理
+│   ├── lstm_predictor.py       # LSTM 预测模型
+│   ├── knn_predictor.py        # KNN 预测模型
+│   ├── water_analysis.py       # 水情分析
+│   └── visualizer.py           # 可视化工具
+├── models/                     # 训练好的模型权重（.h5, .keras）
+├── images/                     # 图表 & 截图
+├── docs/                       # 开发文档 & 架构图
+├── requirements.txt
+└── README.md
+```
+
 ## 快速开始
 
 ```bash
-# 克隆项目
 git clone https://github.com/LY-muyanshiqi/smart-water-demo.git
 cd smart-water-demo
-
-# 安装依赖
 pip install -r requirements.txt
-
-# 启动
-streamlit run app.py
+streamlit run src/water_analysis.py
 ```
 
 ## 相关项目
 
+- [PCCP](https://github.com/LY-muyanshiqi/PCCP) — PCCP-E 环向变形智能预测
 - [smart-water-projects](https://github.com/LY-muyanshiqi/smart-water-projects) — 智慧水利开源项目集
 - [thermal-peak-shaving-pumped-storage](https://github.com/LY-muyanshiqi/thermal-peak-shaving-pumped-storage) — 抽水蓄能减碳优化
