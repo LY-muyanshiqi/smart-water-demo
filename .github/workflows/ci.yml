@@ -46,3 +46,17 @@ jobs:
           import pandas, numpy, sklearn, matplotlib, flask, streamlit, joblib
           print('All core imports OK')
           "
+
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install dependencies
+        run: |
+          pip install --upgrade pip
+          pip install pytest
+      - name: Run tests
+        run: python -m pytest test_project.py -v --tb=short
