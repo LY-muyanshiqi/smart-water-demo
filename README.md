@@ -1,5 +1,6 @@
 # smart-water-demo
 
+[![CI](https://github.com/LY-muyanshiqi/smart-water-demo/actions/workflows/ci.yml/badge.svg)](https://github.com/LY-muyanshiqi/smart-water-demo/actions/workflows/ci.yml)
 ![Python](https://img.shields.io/badge/Python-3.8+-3776AB?style=flat-square&logo=python&logoColor=white)
 ![TensorFlow](https://img.shields.io/badge/TensorFlow-深度学习-FF6F00?style=flat-square&logo=tensorflow&logoColor=white)
 ![Streamlit](https://img.shields.io/badge/Streamlit-前端-FF4B4B?style=flat-square&logo=streamlit&logoColor=white)
